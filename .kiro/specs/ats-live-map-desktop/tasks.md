@@ -116,11 +116,18 @@ Each task includes:
   
   _Requirements: 10.1, 10.2, 10.5, 12.1, 12.2_
 
-- [ ] 2. Implement core data models and interfaces
+- [x] 2. Implement core data models and interfaces
+
+
+
+
+
   
   **What you'll learn**: How to create C# classes (like TypeScript interfaces/classes), properties (like object properties), and structs (lightweight value types).
   
-  - [ ] 2.1 Create data model classes
+  - [x] 2.1 Create data model classes
+
+
     
     **Step-by-step**:
     1. Right-click `ATSLiveMap.Core/Models` folder → Add → Class → Name: `Vector3.cs`
@@ -250,7 +257,9 @@ Each task includes:
     
     _Requirements: 1.2, 1.3, 5.1, 9.1_
   
-  - [ ] 2.2 Define service interfaces
+  - [x] 2.2 Define service interfaces
+
+
     
     **What you'll learn**: Interfaces in C# (like TypeScript interfaces but for defining contracts that classes must implement).
     
