@@ -1,0 +1,19 @@
+{
+  "referencePoints": [
+    {
+      "name": "Los Angeles",
+      "worldPosition": { "x": -87500, "y": 0, "z": -103000 },
+      "mapPixelPosition": { "x": 1250, "y": 6800 }
+    },
+    {
+      "name": "San Francisco",
+      "worldPosition": { "x": -91000, "y": 0, "z": -119000 },
+      "mapPixelPosition": { "x": 950, "y": 5200 }
+    },
+    {
+      "name": "Las Vegas",
+      "worldPosition": { "x": -76000, "y": 0, "z": -96000 },
+      "mapPixelPosition": { "x": 2100, "y": 6200 }
+    }
+  ]
+}
