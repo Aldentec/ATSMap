@@ -1,0 +1,18 @@
+<Project Sdk="WixToolset.Sdk/6.0.2">
+  <PropertyGroup>
+    <OutputName>ProHauler-Setup</OutputName>
+    <OutputType>Package</OutputType>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- Define paths for file sources -->
+    <DefineConstants>
+      PublishDir=$(MSBuildProjectDirectory)\..\publish;
+      SourceDir=$(MSBuildProjectDirectory)\..
+    </DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WixToolset.UI.wixext" Version="6.0.2" />
+  </ItemGroup>
+</Project>

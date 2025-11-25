@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="ProHauler" 
+           Manufacturer="Dorian Smith" 
+           Version="1.0.0" 
+           UpgradeCode="7F8E9D0C-1B2A-4E5F-9C8D-3A4B5C6D7E8F"
+           Compressed="yes"
+           InstallerVersion="500"
+           Scope="perMachine">
+    
+    <MajorUpgrade DowngradeErrorMessage="A newer version of ProHauler is already installed." />
+
+    <!-- Installation directory structure -->
+    <StandardDirectory Id="ProgramFiles6432Folder">
+      <Directory Id="INSTALLFOLDER" Name="ProHauler" />
+    </StandardDirectory>
+
+    <Feature Id="ProductFeature" Title="ProHauler" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+    </Feature>
+
+  </Package>
+</Wix>

@@ -1,0 +1,16 @@
+<Window x:Class="ProHauler.UI.Views.DebugWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ProHauler - Debug" Height="600" Width="500"
+        Background="#2C3E50">
+    
+    <Grid Margin="10">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="DebugOutput" 
+                       FontFamily="Consolas" 
+                       FontSize="12" 
+                       Foreground="#ECF0F1"
+                       TextWrapping="Wrap" />
+        </ScrollViewer>
+    </Grid>
+</Window>

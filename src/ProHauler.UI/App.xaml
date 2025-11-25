@@ -1,0 +1,13 @@
+<Application x:Class="ProHauler.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ProHauler.UI">
+    <Application.Resources>
+        <!-- Chart Color Palette for LiveCharts -->
+        <SolidColorBrush x:Key="ChartPrimaryColor" Color="#3498DB" />
+        <SolidColorBrush x:Key="ChartSuccessColor" Color="#27AE60" />
+        <SolidColorBrush x:Key="ChartWarningColor" Color="#F39C12" />
+        <SolidColorBrush x:Key="ChartDangerColor" Color="#E74C3C" />
+        <SolidColorBrush x:Key="ChartSecondaryColor" Color="#95A5A6" />
+    </Application.Resources>
+</Application>

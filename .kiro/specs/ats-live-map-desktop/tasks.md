@@ -388,11 +388,18 @@ Each task includes:
     
     _Requirements: 9.4, 15.1_
 
-- [ ] 3. Implement telemetry layer
+- [x] 3. Implement telemetry layer
+
+
+
+
+
   
   **What you'll learn**: How to read shared memory (inter-process communication), implement async patterns, and handle events in C#.
   
-  - [ ] 3.1 Create shared memory telemetry client
+  - [x] 3.1 Create shared memory telemetry client
+
+
     
     **What is shared memory?**: The telemetry plugin (DLL running inside ATS) writes game data to a shared memory region. Our app reads from that same memory region - like two apps sharing a file, but in RAM for speed.
     
@@ -541,7 +548,9 @@ Each task includes:
     
     _Requirements: 1.1, 1.2, 1.4, 1.5, 2.1_
   
-  - [ ] 3.2 Implement telemetry data parsing
+
+  - [x] 3.2 Implement telemetry data parsing
+
     
     **What you'll learn**: JSON parsing in C# (like JSON.parse), error handling with try-catch, and data validation.
     
@@ -650,7 +659,9 @@ Each task includes:
     
     _Requirements: 1.2, 1.3, 14.1_
   
-  - [ ] 3.3 Create telemetry polling service
+  - [x] 3.3 Create telemetry polling service
+
+
     
     **What you'll learn**: Background threading, marshaling to UI thread (important for desktop apps), and cancellation tokens.
     
@@ -740,15 +751,24 @@ Each task includes:
     
     _Requirements: 13.1, 1.2_
 
-- [ ] 4. Implement coordinate projection system
-  - [ ] 4.1 Create affine transformation implementation
+- [x] 4. Implement coordinate projection system
+
+
+
+
+
+  - [x] 4.1 Create affine transformation implementation
+
+
     - Implement AffineCoordinateProjection class with transformation matrix
     - Write Calibrate method using least-squares solution for affine parameters
     - Implement WorldToMap method applying transformation: [x_map, y_map] = M * [x_world, z_world] + [tx, ty]
     - Add coordinate validation and clamping to map bounds
     - _Requirements: 5.1, 5.2, 5.3, 5.4_
   
-  - [ ] 4.2 Load and apply calibration points
+
+  - [x] 4.2 Load and apply calibration points
+
     - Read calibration.json file with reference points (Los Angeles, San Francisco, Las Vegas)
     - Parse calibration data into CalibrationPoint objects
     - Call Calibrate method with loaded points on application startup
@@ -756,66 +776,98 @@ Each task includes:
     - _Requirements: 5.2, 5.5, 14.4_
 
 
-- [ ] 5. Implement map service and loading
-  - [ ] 5.1 Create single-image map service
+- [x] 5. Implement map service and loading
+
+
+
+
+
+
+  - [x] 5.1 Create single-image map service
+
     - Implement SingleImageMapService class that loads PNG map image
     - Use BitmapImage with CacheOption.OnLoad for efficient loading
     - Freeze bitmap to make it thread-safe and immutable
     - Cache loaded image to avoid repeated disk reads
     - _Requirements: 4.1, 4.4, 13.2_
   
-  - [ ] 5.2 Implement map metadata management
+  - [x] 5.2 Implement map metadata management
+
+
     - Create MapMetadata class with width, height, and reference points
     - Load metadata from configuration file
     - Provide metadata to coordinate projection system
     - Validate map file exists and is readable before loading
     - _Requirements: 4.5, 14.3_
   
-  - [ ] 5.3 Add error handling for map loading
+  - [x] 5.3 Add error handling for map loading
+
+
     - Handle FileNotFoundException with user-friendly error message
     - Display error dialog if map fails to load with file path information
     - Allow application to continue running without map (show error state)
     - Log all map loading errors to diagnostic log
     - _Requirements: 14.3, 14.5_
 
-- [ ] 6. Implement state management and smoothing
-  - [ ] 6.1 Create state manager service
+- [x] 6. Implement state management and smoothing
+
+
+
+
+
+
+  - [x] 6.1 Create state manager service
+
     - Implement StateManager class that receives telemetry updates
     - Apply coordinate projection to convert world position to map position
     - Maintain current PlayerState with both raw and smoothed values
     - Emit StateUpdated events when player state changes
     - _Requirements: 9.2, 7.3, 1.2_
   
-  - [ ] 6.2 Implement position smoothing
+  - [x] 6.2 Implement position smoothing
+
+
     - Create LinearSmoother class with configurable smoothing factor (default 0.3)
     - Apply linear interpolation to position: smoothed = last + (new - last) * factor
     - Apply smoothing to heading angle with separate factor (default 0.5)
     - Ensure smoothing doesn't introduce lag exceeding 500ms
     - _Requirements: 8.1, 8.2, 8.4, 8.5_
   
-  - [ ] 6.3 Add connection status management
+  - [x] 6.3 Add connection status management
+
+
     - Track connection status (Disconnected, Connecting, Connected, Error)
     - Emit connection status change events
     - Display appropriate status messages for each state
     - Implement automatic reconnection when connection is lost
     - _Requirements: 1.4, 1.5, 14.1_
 
-- [ ] 7. Create WPF UI foundation
-  - [ ] 7.1 Set up main window and MVVM structure
+- [x] 7. Create WPF UI foundation
+
+
+
+
+  - [x] 7.1 Set up main window and MVVM structure
+
+
     - Create MainWindow.xaml with menu bar, toolbar, canvas area, and status bar
     - Implement MainViewModel with INotifyPropertyChanged
     - Set up data binding between ViewModel and View
     - Add dependency injection container for service resolution
     - _Requirements: 3.3, 3.5, 9.3_
   
-  - [ ] 7.2 Implement view model properties and commands
+  - [x] 7.2 Implement view model properties and commands
+
+
     - Add properties: CurrentPlayerState, ConnectionStatus, IsConnected, ZoomLevel
     - Implement ICommand for ZoomIn, ZoomOut, CenterOnPlayer
     - Wire up property change notifications
     - Bind ViewModel properties to UI elements
     - _Requirements: 6.1, 6.2, 6.3, 9.3_
   
-  - [ ] 7.3 Create status bar with connection indicator
+  - [x] 7.3 Create status bar with connection indicator
+
+
     - Display connection status with colored indicator (green=connected, red=disconnected, yellow=connecting)
     - Show current world coordinates in status bar
     - Display current speed in MPH
@@ -823,22 +875,33 @@ Each task includes:
     - _Requirements: 1.4, 1.5, 14.4_
 
 
-- [ ] 8. Implement map canvas rendering
-  - [ ] 8.1 Create custom MapCanvas control
+- [x] 8. Implement map canvas rendering
+
+
+
+
+
+  - [x] 8.1 Create custom MapCanvas control
+
+
     - Create MapCanvas class inheriting from FrameworkElement
     - Define dependency properties: MapImage, PlayerPosition, PlayerHeading, ZoomLevel
     - Override OnRender method to draw map and player marker
     - Set up TransformGroup with ScaleTransform and TranslateTransform for zoom/pan
     - _Requirements: 4.1, 6.5, 7.1, 9.3_
   
-  - [ ] 8.2 Implement map image rendering
+  - [x] 8.2 Implement map image rendering
+
+
     - Draw map image using DrawingContext.DrawImage in OnRender
     - Apply scale and translate transforms for zoom and pan
     - Implement dirty region tracking to avoid unnecessary re-renders
     - Cache map rendering when only player marker changes
     - _Requirements: 4.1, 6.5, 13.1_
   
-  - [ ] 8.3 Implement player marker rendering
+  - [x] 8.3 Implement player marker rendering
+
+
     - Create triangle geometry pointing upward (top point at 0, -20)
     - Apply rotation transform based on heading angle (convert radians to degrees)
     - Apply translation transform to position marker at player location
@@ -846,58 +909,84 @@ Each task includes:
     - Add yellow dot at exact position for precision
     - _Requirements: 7.1, 7.2, 7.4, 7.5_
   
-  - [ ] 8.4 Add marker scaling with zoom level
+
+  - [x] 8.4 Add marker scaling with zoom level
+
     - Scale marker inversely with zoom to maintain constant screen size
     - Clamp marker scale between 0.5 and 2.0
     - Ensure marker remains visible and distinguishable at all zoom levels
     - Apply scale transform before rotation and translation
     - _Requirements: 7.5, 6.4_
 
-- [ ] 9. Implement interactive map controls
-  - [ ] 9.1 Add mouse pan functionality
+- [x] 9. Implement interactive map controls
+
+
+
+
+
+
+  - [x] 9.1 Add mouse pan functionality
+
     - Handle MouseDown event to start panning (capture mouse)
     - Handle MouseMove event to update translate transform based on drag delta
     - Handle MouseUp event to stop panning (release mouse capture)
     - Update last mouse position on each move for smooth panning
     - _Requirements: 6.1, 6.5_
   
-  - [ ] 9.2 Add mouse wheel zoom functionality
+
+  - [x] 9.2 Add mouse wheel zoom functionality
+
     - Handle MouseWheel event to detect scroll direction
     - Calculate zoom factor: 1.1 for zoom in, 0.9 for zoom out
     - Clamp zoom level between MinZoom (0.25) and MaxZoom (4.0)
     - Adjust translate transform to zoom toward mouse cursor position
     - _Requirements: 6.2, 6.3, 6.4, 6.5_
   
-  - [ ] 9.3 Implement center-on-player command
+
+  - [x] 9.3 Implement center-on-player command
+
     - Calculate translation needed to center player in viewport
     - Set translate transform to center player marker
     - Trigger re-render after centering
     - Bind to toolbar button and keyboard shortcut (Home key)
     - _Requirements: 6.1, 6.5_
   
-  - [ ] 9.4 Add zoom in/out toolbar buttons
+
+  - [x] 9.4 Add zoom in/out toolbar buttons
+
     - Create toolbar with + and - buttons
     - Implement zoom commands that adjust scale transform
     - Zoom toward center of viewport when using buttons
     - Display current zoom percentage in toolbar
     - _Requirements: 6.2, 6.3, 6.4_
 
-- [ ] 10. Implement real-time updates and rendering loop
-  - [ ] 10.1 Wire up telemetry to state manager
+- [x] 10. Implement real-time updates and rendering loop
+
+
+
+
+
+  - [x] 10.1 Wire up telemetry to state manager
+
+
     - Subscribe StateManager to TelemetryClient.DataUpdated event
     - Call StateManager.UpdateFromTelemetry on each telemetry update
     - Ensure updates happen on background thread, marshal to UI thread for rendering
     - Add error handling for update processing
     - _Requirements: 1.2, 7.3, 8.3, 13.1_
   
-  - [ ] 10.2 Connect state manager to UI
+  - [x] 10.2 Connect state manager to UI
+
+
     - Subscribe MainViewModel to StateManager.StateUpdated event
     - Update CurrentPlayerState property when state changes
     - Trigger MapCanvas.InvalidateVisual to re-render
     - Implement frame rate limiting to maintain 30+ FPS
     - _Requirements: 7.3, 8.3, 6.5_
   
-  - [ ] 10.3 Optimize rendering performance
+  - [x] 10.3 Optimize rendering performance
+
+
     - Implement dirty region tracking (map vs marker)
     - Only re-render map when zoom/pan changes
     - Always re-render marker (updates frequently)

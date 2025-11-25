@@ -37,6 +37,9 @@ dotnet build ATSLiveMap.sln --configuration Release
 
 # Run the application
 dotnet run --project src/ATSLiveMap.UI/ATSLiveMap.UI.csproj
+
+dotnet run --project
+ src/ATSLiveMap.UI/ATSLiveMap.UI.csproj
 ```
 
 ## Project Structure
